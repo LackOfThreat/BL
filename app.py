@@ -34,8 +34,8 @@ if __name__ == "__main__":
     data = pd.read_csv(io.StringIO(file.decode('utf-8'))).drop("Unnamed: 0", axis=1)
     data["time"] = pd.to_datetime(data.time)
     
-    # tz = pytz.timezone('Europe/Kiev')
-    tz = pytz.timezone('US/Alaska')
+    tz = pytz.timezone('Europe/Kiev')
+    # tz = pytz.timezone('US/Alaska')
     kiev_now = datetime.now(tz)
     kiev_now_str = "%s-%s-%s %s:00:00" % (kiev_now.year, kiev_now.month, \
         kiev_now.day, kiev_now.hour)
