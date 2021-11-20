@@ -46,7 +46,7 @@ if __name__ == "__main__":
     st.write("Текущий временной промежуток:", kiev_now_str, " -" ,kiev_one_hour_more_str)
     
     if len(data[data["time"]==kiev_now_datetime]) == 0:
-        st.write("**На это время нет вероятных заказов**")
+        st.write("**На это время нет вероятных заказов.**")
     else:
         st.write("**Нужно приготовить:**")
 
