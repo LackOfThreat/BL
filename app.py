@@ -69,8 +69,8 @@ if __name__ == "__main__":
         
         # st.dataframe(data[data["time"]==kiev_now_datetime])
         for index, row in data[data["ds"]==kiev_now_datetime].iterrows():
-            st.write("*",row[0], f"{int(row[2])}x")
-            amount += int(row[2])
+            st.write("*",row[0], f"{int(row[3])}x")
+            amount += int(row[3])
         kiev_now_datetime = kiev_now_datetime+timedelta(hours=1)
         hist_data['index'].append(time[10:-3])
         hist_data['amount'].append(amount)
