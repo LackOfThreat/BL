@@ -31,8 +31,8 @@ if __name__ == "__main__":
     st.set_page_config(page_title="Багато Лосося",
                    page_icon="💸",
                    layout="wide")
-    link = "https://drive.google.com/file/d/1EtzVdJjpeJYvSCH4-6Z9sg2rkbhBOlza/view?usp=sharing"
-    file = download_file_from_google_drive("1EtzVdJjpeJYvSCH4-6Z9sg2rkbhBOlza").content
+    link = "https://drive.google.com/file/d/1lTIOFg7lPw_xMtuSDe7Rdm_To0qbo4ra/view?usp=sharing"
+    file = download_file_from_google_drive("1lTIOFg7lPw_xMtuSDe7Rdm_To0qbo4ra").content
     data = pd.read_csv(io.StringIO(file.decode('utf-8'))).drop("Unnamed: 0", axis=1)
     # data['date'] = pd.to_datetime(data.time, format="%Y-%m-%d")
     data["ds"] = pd.to_datetime(data.ds)
